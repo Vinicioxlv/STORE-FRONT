@@ -15,14 +15,14 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-           Bienvenido a Tyfood alimentacion saludable a domicilio
+           Bienvenido a Voreas ecommerce de productos fitness 
           </h1>
           <p className="primary-text">
-          Nos enfocamos en preparar platillos saludables y deliciosos para que puedas cuidarte sin sacrificar el sabor. 
+          Nuestro objetivo es ayudarte a cumplir tus objetivos deportivos. 
           </p>
           <Link to ='/Inicio'>
             <button className="secondary-button"> 
-              Ordena Ahora <FiArrowRight />{" "}
+              Ver productos <FiArrowRight />{" "}
             </button>
           </Link>
         </div>

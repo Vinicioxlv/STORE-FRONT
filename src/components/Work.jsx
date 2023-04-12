@@ -7,27 +7,26 @@ const Work = () => {
   const workInfoData = [
     {
       image: PickMeals,
-      title: "Evaluacion",
-      text: "Realizamos una evaluacion de tus requerimientos nutricionales y preferencias",
+      title: "Asesoría",
+      text: "Te asesoramos con el producto que mas se adapta a tus requerimientos",
     },
     {
       image: ChooseMeals,
-      title: "Seleccion",
-      text: "Seleciona el menu que mas guste hastas las 10 de la mañana",
+      title: "Garantía",
+      text: "12 meses de garantía por defectos de fábrica",
     },
     {
       image: DeliveryMeals,
-      title: "Entregas Raápidas",
-      text: "Indicanos el lugar de entrega y recibiras tu pedido hasta las 13:00",
+      title: "Entrega incluida",
+      text: "Nuestros precios incluyen entrega a nivel Nacional",
     },
   ];
   return (
     <div className="work-section-wrapper">
-      <div className="work-section-top">
-        <p className="primary-subheading">Trabajo</p>
-        <h1 className="primary-heading">Como trabajamos</h1>
+      <div className="work-section-top"><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+       <h1 className="primary-heading">Como trabajamos</h1>
         <p className="primary-text">
-          Preparamos menús saludables basados en tus requerimientos alimenticios, nivel de actividad fisica y preferencias.
+          Contamos con productos fitness inteligentes entre balanzas, cintas metricas, cuerdas, etc. Los mismo que incluyen:
         </p>
       </div>
       <div className="work-section-bottom">

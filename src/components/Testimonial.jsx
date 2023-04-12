@@ -7,7 +7,8 @@ const Testimonial = () => {
     <div className="work-section-wrapper">
       <div className="work-section-top">
         <p className="primary-subheading">Testimomios</p>
-        <h1 className="primary-heading">Que estan diciendo</h1>
+        <h1 className="primary-heading">Que estan diciendo nuestros clientes</h1>
+        <h1 className="primary-heading">nuestros clientes</h1>
         <p className="primary-text">
       
         </p>
@@ -15,7 +16,7 @@ const Testimonial = () => {
       <div className="testimonial-section-bottom">
         <img src={ProfilePic} alt="" />
         <p>
-         Las dietas de Tyfood son super buenas, me gusta bastante porque puedo alimentarme bien y toman en cuenta mis necesidades caloricas y que alimentos son mis preferidos o los que no puedo comer. Lo mejor es que me entregan en mi trabajo
+         La balanaza inteligente de voreas me permitio conocer mi % de grasa, masa muscular
         </p>
         <div className="testimonials-stars-container">
           <AiFillStar />
