@@ -15,12 +15,15 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-           Bienvenido a Voreas ecommerce de productos fitness 
+           Bienvenido a Voreas 
+          </h1>
+          <h1 className="primary-heading">
+           Ecommerce de productos fitness 
           </h1>
           <p className="primary-text">
           Nuestro objetivo es ayudarte a cumplir tus objetivos deportivos. 
           </p>
-          <Link to ='/Inicio'>
+          <Link to ='/Listado'>
             <button className="secondary-button"> 
               Ver productos <FiArrowRight />{" "}
             </button>

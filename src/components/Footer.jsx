@@ -21,22 +21,22 @@ const Footer = () => {
       </div>
       <div className="footer-section-two">
         <div className="footer-section-columns">
-          <span>Dietas</span>
-          <span>Alimentacion saludable</span>
-          <span>como trabajamos</span>
-          <span>Testimonios</span>
-          <span>Contactanos</span>
-          <span>Empleos</span>
+          <span>Productos Fitness</span>
+          <span>Balanzas inteligentes</span>
+          <span>cuerdas inteligentes</span>
+          <span>Cintas métricas</span>
+          <span>Asesoria en nutrición</span>
+          <span>Asesoria deportiva</span>
         </div>
         <div className="footer-section-columns">
           <span>0986426729</span>
-          <span>info@tyfood.com</span>
-          <span>ventas@tyfood.com</span>
-          <span>nutri@tyfood.com</span>
+          <span>info@voreas.ec</span>
+          <span>ventas@voreas.ec</span>
+          <span>nutri@voreas.ec</span>
         </div>
         <div className="footer-section-columns">
           <span>Terminios y condiciones</span>
-          <span>©Tyfoof proyecto demo UCAMP</span>
+          <span>©Voreas 2023 derechos reservados</span>
         </div>
       </div>
     </div>

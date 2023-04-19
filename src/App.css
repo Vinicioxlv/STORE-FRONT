@@ -240,7 +240,7 @@ nav {
   margin-top: 10rem;
 }
 .footer-logo-container {
-  max-width: 110px;
+  max-width: 400px;
 }
 .footer-icons {
   margin-top: 2.5rem;
@@ -360,7 +360,7 @@ nav {
 }
 @media (max-width: 800px) {
   .nav-logo-container {
-    max-width: 140px;
+    max-width: 400px;
   }
   .navbar-links-container {
     display: none;
@@ -447,6 +447,7 @@ nav {
   }
   .footer-wrapper {
     flex-direction: column;
+     text-align: center;
   }
   .footer-section-two {
     flex-direction: column;

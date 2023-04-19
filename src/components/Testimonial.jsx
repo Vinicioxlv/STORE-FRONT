@@ -7,7 +7,7 @@ const Testimonial = () => {
     <div className="work-section-wrapper">
       <div className="work-section-top">
         <p className="primary-subheading">Testimomios</p>
-        <h1 className="primary-heading">Que estan diciendo nuestros clientes</h1>
+        <h1 className="primary-heading">Que estan diciendo</h1>
         <h1 className="primary-heading">nuestros clientes</h1>
         <p className="primary-text">
       
@@ -16,7 +16,7 @@ const Testimonial = () => {
       <div className="testimonial-section-bottom">
         <img src={ProfilePic} alt="" />
         <p>
-         La balanaza inteligente de voreas me permitio conocer mi % de grasa, masa muscular
+         Los productos de Voreas son de excelente calidad, ademas la atención es muy buena supieron aclarar todas mis preguntas en la instalacion y manejo de la balanza advance
         </p>
         <div className="testimonials-stars-container">
           <AiFillStar />

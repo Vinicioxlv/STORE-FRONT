@@ -58,7 +58,7 @@ const Navbar = () => {
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a>
-        <Link to ='/Inicio'>
+        <Link to ='/Listado'>
            <button className="primary-button">Tienda</button>
         </Link>
       </div>

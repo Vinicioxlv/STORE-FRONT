@@ -8,12 +8,12 @@ const Work = () => {
     {
       image: PickMeals,
       title: "Asesoría",
-      text: "Te asesoramos con el producto que mas se adapta a tus requerimientos",
+      text: "En la selección, instalación, manejo y soporte técnico",
     },
     {
       image: ChooseMeals,
       title: "Garantía",
-      text: "12 meses de garantía por defectos de fábrica",
+      text: "12 meses de garantía con factura",
     },
     {
       image: DeliveryMeals,
@@ -25,9 +25,7 @@ const Work = () => {
     <div className="work-section-wrapper">
       <div className="work-section-top"><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
        <h1 className="primary-heading">Como trabajamos</h1>
-        <p className="primary-text">
-          Contamos con productos fitness inteligentes entre balanzas, cintas metricas, cuerdas, etc. Los mismo que incluyen:
-        </p>
+        <p className="primary-text">Te asesoramos en la seleccion del producto que mas se adapte a tus necesidades, nuestros productos incluyen:</p>
       </div>
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
