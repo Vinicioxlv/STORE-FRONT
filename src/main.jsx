@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Listado from "./components/Listado.jsx"
+import CrearCuenta from "./components/CrearCuenta.jsx"
 import ProductDetail from "./components/ProductDetail.jsx"
 import "bootswatch/dist/minty/bootstrap.min.css";
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
 {
   path: '/Listado',
   element: <Listado />,
+},
+{
+  path: '/CrearCuenta',
+  element: <CrearCuenta />,
 },
 {
   path: '/ProductDetail/:id',

@@ -54,7 +54,10 @@ const Navbar = () => {
         </Link>
         <a href="">Como trabajamos</a>
         <a href="">Testimonios</a>
-        <a href="">Contactacto</a>
+        <Link to ='/CrearCuenta'>
+        <a href="">Crear cuenta</a>
+        </Link>
+          
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a>
