@@ -24,12 +24,11 @@ const Listado = () => {
       <div className="row">
         {products.map(product => (
           <div className="col-md-4 mb-4" key={product._id}>
-             <Link to= {`/ProductDetail/${product._id}`}>
+             <Link to= {`/ProductDetail/${product._id}`} className="card-link">
               <Card>
               <Card.Img variant="top" src={productoBalanza} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
                 <Card.Text>Precio: ${product.price}</Card.Text>
               </Card.Body>
             </Card>

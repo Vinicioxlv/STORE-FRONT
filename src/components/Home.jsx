@@ -23,7 +23,7 @@ const Home = () => {
           <p className="primary-text">
           Nuestro objetivo es ayudarte a cumplir tus objetivos deportivos. 
           </p>
-          <Link to ='/Listado'>
+          <Link to ='/Listado' className="card-link">
             <button className="secondary-button"> 
               Ver productos <FiArrowRight />{" "}
             </button>
