@@ -17,8 +17,10 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+ 
   const menuOptions = [
     {
       text: "Home",
@@ -52,12 +54,15 @@ const Navbar = () => {
         <Link to ='/'>
         <a href="">Home</a>
         </Link>
-        <a href="">Como trabajamos</a>
-        <a href="">Testimonios</a>
-        <Link to ='/CrearCuenta'>
-        <a href="">Crear cuenta</a>
+        <Link to ='/Profile'>
+          <a href="">Perfil</a>
         </Link>
-          
+        <Link to ='/CrearCuenta'>
+           <a href="">Registrarse</a>
+        </Link>
+        <Link to ='/Login'>
+           <a href="">Iniciar sesión</a>
+        </Link>
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a>
@@ -88,6 +93,7 @@ const Navbar = () => {
           <Divider />
         </Box>
       </Drawer>
+    
     </nav>
   );
 };

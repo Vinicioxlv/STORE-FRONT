@@ -1,23 +1,3 @@
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import Card from 'react-bootstrap/Card';
-// import Footer from "./Footer";
-// import productoBalanza from "../assets/productoBalanza.png";
-// import { Link } from 'react-router-dom';
-
-// const CrearCuenta = () => {
-//     return (
-//         <div className="App">
-//             <Navbar /><br></br>
-//             Crear cuenta
-//             <Footer />
-//         </div>
-//     );
-// }
-
-// export default CrearCuenta;
-
 import "../App.css";
 import Navbar from "./Navbar.jsx"
 import Footer from "./Footer";
@@ -56,6 +36,7 @@ const CrearCuenta = () => {
     <div className="App">
     <Navbar /><br></br>
         <Container>
+      <h1 style={{textAlign: "center"}}>Registro</h1><br></br>
       <Row className="justify-content-center mt-5">
         <Col md={6}>
           <Form onSubmit={handleSubmit}>
@@ -79,7 +60,7 @@ const CrearCuenta = () => {
               <Form.Label>Contraseña</Form.Label>
               <Form.Control type="password" name="password" value={formData.password} onChange={handleChange} />
             </Form.Group><br></br>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" style ={{ backgroundColor: '#333399'}}>
               Crear Cuenta
             </Button>
           </Form>

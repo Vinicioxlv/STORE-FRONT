@@ -5,6 +5,8 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Listado from "./components/Listado.jsx"
 import CrearCuenta from "./components/CrearCuenta.jsx"
 import ProductDetail from "./components/ProductDetail.jsx"
+import Login from "./components/Login.jsx"
+import Profile from "./components/Profile.jsx"
 import "bootswatch/dist/minty/bootstrap.min.css";
 
 
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
   },
+  {
+    path: '/Profile',
+    element: <Profile />,
+  },
 {
   path: '/Listado',
   element: <Listado />,
@@ -20,6 +26,10 @@ const router = createBrowserRouter([
 {
   path: '/CrearCuenta',
   element: <CrearCuenta />,
+},
+{
+  path: '/Login',
+  element: <Login />,
 },
 {
   path: '/ProductDetail/:id',
@@ -31,7 +41,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    
       <RouterProvider router={router} />
+   
   </React.StrictMode>
 
 )
