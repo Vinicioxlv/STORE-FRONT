@@ -8,7 +8,7 @@ import ProductDetail from "./components/ProductDetail.jsx"
 import Login from "./components/Login.jsx"
 import Profile from "./components/Profile.jsx"
 import "bootswatch/dist/minty/bootstrap.min.css";
-
+import UserProvider from './context/userContext'
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,9 @@ const router = createBrowserRouter([
   },
   {
     path: '/Profile',
-    element: <Profile />,
+    element: <UserProvider>
+                <Profile/>
+            </UserProvider>
   },
 {
   path: '/Listado',
@@ -25,11 +27,14 @@ const router = createBrowserRouter([
 },
 {
   path: '/CrearCuenta',
-  element: <CrearCuenta />,
+  element: <UserProvider><CrearCuenta /></UserProvider>
 },
 {
   path: '/Login',
-  element: <Login />,
+  element: 
+  <UserProvider>
+    <Login />
+  </UserProvider>
 },
 {
   path: '/ProductDetail/:id',

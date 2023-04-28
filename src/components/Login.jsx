@@ -1,23 +1,25 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, {  useContext } from 'react'
 import axios from 'axios'
 import Navbar from "./Navbar.jsx"
-import Footer from "./Footer";
+import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import logo2 from "../assets/logo2.png";
 
-const Login = () => {
-  const [ loginForm, setLoginForm] = useState({ email: "", password: "" })
 
+const Login = () => {
+  //const [ loginForm, setLoginForm] = useState({ email: "", password: "" })
+
+const { userData, setUserData } = useContext(UserContext);
 
   const url = 'http://localhost:5000/auth/login'
   const url2 = 'http://localhost:5000/user/me'
   const navigation = useNavigate()
 
   const handleSubmit = ()=>{
-    console.log(loginForm)
+    console.log(userData)
 
-    axios.post( url, loginForm)
+    axios.post( url, userData)
     .then(res=>{
        console.log(res.data)
        return(
@@ -28,6 +30,7 @@ const Login = () => {
                }
            }).then( response =>{
                console.log(response.data)
+               setUserData(response.data)
                navigation('/Profile')
            })
        )
@@ -36,11 +39,11 @@ const Login = () => {
 
    const handleChange = (e) =>{
     const {name, value} = e.target
-    setLoginForm({
-     ...loginForm,
+    setUserData({
+     ...userData,
      [name]: value
     }) 
-    console.log(loginForm)
+    console.log(userData)
  }
 
   return (
@@ -58,7 +61,7 @@ const Login = () => {
                   type='email'
                   name='email'
                   placeholder='Ingresa tu email'
-                  value={loginForm.email}
+                  value={userData.email}
                   onChange={handleChange}
                 />
               </Form.Group>
@@ -68,7 +71,7 @@ const Login = () => {
                   type='password'
                   name='password'
                   placeholder='Ingresa tu contraseña'
-                  value={loginForm.password}
+                  value={userData.password}
                   onChange={handleChange}
                 />
               </Form.Group><br></br>
@@ -79,10 +82,11 @@ const Login = () => {
           </Col>
         </Row>
       </Container>
-      <Footer />
+    
     </div>
 
   )
 }
 
 export default Login
+

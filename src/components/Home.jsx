@@ -21,7 +21,7 @@ const Home = () => {
            Ecommerce de productos fitness 
           </h1>
           <p className="primary-text">
-          Nuestro objetivo es ayudarte a cumplir tus objetivos deportivos. 
+          Te ayudamos a vivir de una manera más saludable y atlética. 
           </p>
           <Link to ='/Listado' className="card-link">
             <button className="secondary-button"> 
