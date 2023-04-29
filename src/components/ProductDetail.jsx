@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Card, Button, Col, Container, Row } from 'react-bootstrap';
 import Footer from "./Footer";
-import productoBalanza from "../assets/productoBalanza.png";
+import productoBalanza from "../assets/productobalanza.png";
 import { Link } from 'react-router-dom';
 
 

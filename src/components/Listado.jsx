@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Footer from "./Footer";
-import productoBalanza from "../assets/productoBalanza.png";
+import productoBalanza from "../assets/productobalanza.png"
 import { Link } from 'react-router-dom';
 
 const Listado = () => {
