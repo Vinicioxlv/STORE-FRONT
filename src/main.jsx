@@ -8,7 +8,7 @@ import ProductDetail from "./components/ProductDetail.jsx"
 import Login from "./components/Login.jsx"
 import Profile from "./components/Profile.jsx"
 import "bootswatch/dist/minty/bootstrap.min.css";
-import UserProvider from './context/userContext'
+import UserProvider from './context/userContext.jsx'
 
 const router = createBrowserRouter([
   {
