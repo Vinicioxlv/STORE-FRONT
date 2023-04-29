@@ -12,8 +12,8 @@ const Login = () => {
 
 const { userData, setUserData } = useContext(UserContext);
 
-  const url = 'http://localhost:5000/auth/login'
-  const url2 = 'http://localhost:5000/user/me'
+  const url = 'https://store-backend-4.vercel.app/api/v1/auth/login'
+  const url2 = 'https://store-backend-4.vercel.app/api/v1/user/me'
   const navigation = useNavigate()
 
   const handleSubmit = ()=>{

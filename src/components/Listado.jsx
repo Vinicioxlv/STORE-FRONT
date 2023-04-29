@@ -12,7 +12,7 @@ const Listado = () => {
 
   useEffect(() => {
     // Llamada a la API para obtener los productos utilizando Axios
-    axios.get('http://localhost:5000/products')
+    axios.get('https://store-backend-4.vercel.app/api/v1/products')
       .then(response => setProducts(response.data))
       .catch(error => console.error('Error fetching products:', error));
   }, []);

@@ -24,7 +24,7 @@ const CrearCuenta = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/register', userData);
+      const response = await axios.post('https://store-backend-4.vercel.app/api/v1/register', userData);
       console.log(response.data); // Mostrar la respuesta de la API en la consola
       // Realizar acciones adicionales después de la solicitud exitosa, como redireccionar a otra página, mostrar un mensaje de éxito, etc.
     } catch (error) {
@@ -74,43 +74,3 @@ const CrearCuenta = () => {
 };
 
 export default CrearCuenta;
-// import "../App.css";
-// import Navbar from "./Navbar.jsx"
-// import React from 'react'
-// import axios from 'axios'
-// import { useContext } from 'react'
-// import { UserContext } from '../context/userContext'
-
-// const CrearCuenta = () => {
-//     const {userData, setUserData} = useContext(UserContext)
-
-//     const saverUser = async()=>{
-//      const url = 'http://localhost:5000/register'
-//      const result = await axios.post(url, userData)
-//      console.log(result)
-//     }
-    
-//     const handleChange = (e) =>{
-//      const {name, value} = e.target
-//      setUserData({
-//        ...userData,
-//        [name]: value
-//      })
-//      console.log(userData)
-//     }
-//      return (
-//        <div>
-//          <Navbar />
-//          <form>
-//            <input type="text" name="name"  onChange={handleChange} placeholder='Nombre'/>
-//            <input type="text" name="lastname"  onChange={handleChange}  placeholder='Apellido'/>
-//            <input type="text" name="username" onChange={handleChange}  placeholder='Nombre de usuario'/>
-//            <input type="text" name="email"  onChange={handleChange} placeholder='Correo' />
-//            <input type="text" name="password"  onChange={handleChange} placeholder='Contraseña'/>
-//            <button onClick={()=> saverUser()}>Enviar</button>
-//          </form>
-//        </div>
-//      )
-// }
-
-// export default CrearCuenta
