@@ -1,7 +1,7 @@
 import React, {  useContext } from 'react'
 import axios from 'axios'
 import Navbar from "./Navbar.jsx"
-import { UserContext } from '../context/userContext';
+import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import logo2 from "../assets/logo2.png";

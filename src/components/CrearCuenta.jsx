@@ -7,7 +7,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import { useContext } from 'react'
-import { UserContext } from '../context/userContext'
+import { UserContext } from '../context/UserContext'
 
 const CrearCuenta = () => {
   const {userData, setUserData } = useContext(UserContext)

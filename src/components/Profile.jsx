@@ -35,7 +35,7 @@
 
 import React, { useContext } from 'react'
 //import BtnChecout from './Checkout/BtnChecout'
-import { UserContext } from '../context/userContext'
+import { UserContext } from '../context/UserContext'
 import { useNavigate, useRouteLoaderData } from 'react-router-dom'
 import { Card, ListGroup, Button } from "react-bootstrap";
 import imagen from '../assets/descarga.png'
