@@ -19,7 +19,7 @@ const ProductDetail = () => {
 
   // Hace una llamada a la API para obtener los detalles del producto
   useEffect(() => {
-    axios.get(`https://store-backend-4.vercel.app/api/v1/products${id}`)
+    axios.get(`https://store-backend-4.vercel.app/api/v1/products/${id}`)
       .then(response => {
         // Actualiza el estado con los datos del producto obtenidos de la API
         setProduct(response.data);
