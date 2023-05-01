@@ -13,7 +13,7 @@ const Login = () => {
 const { userData, setUserData } = useContext(UserContext);
 
   const url = 'https://store-backend-4.vercel.app/api/v1/auth/login'
-  const url2 = 'https://store-backend-4.vercel.app/api/v1/user/me'
+  const url2 = 'https://store-backend-4.vercel.app/api/v1/users/me'
   const navigation = useNavigate()
 
   const handleSubmit = ()=>{
