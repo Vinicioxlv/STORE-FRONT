@@ -1,40 +1,7 @@
-// import React, { useContext } from 'react'
-// //import BtnChecout from './Checkout/BtnChecout'
-// import { UserContext } from '../context/userContext'
-// import { useNavigate } from 'react-router-dom'
 
-// const Profile = () => {
-//   const {userData, logout} = useContext(UserContext)
-//   const navigation = useNavigate()
-
-//   const handleLogout = () =>{
-//     logout()
-//     navigation('/')
-//   }
-
-//   return (
-//     <div> 
-//         Profile
-
-//        {
-//         userData ? (
-//           <div>
-//             <p>Bienvenido {userData.name}</p>
-           
-//             <button onClick={handleLogout}>Cerrar sesion</button>
-//           </div>
-//         ):(
-//           <p>No estas logeado</p>
-//         )
-//        }
-//     </div>
-//   )
-// }
-
-// export default Profile
 
 import React, { useContext } from 'react'
-//import BtnChecout from './Checkout/BtnChecout'
+import BtnChecout from './Checkout/BtnChecout'
 import { UserContext } from '../context/UserContext'
 import { useNavigate, useRouteLoaderData } from 'react-router-dom'
 import { Card, ListGroup, Button } from "react-bootstrap";
@@ -83,6 +50,7 @@ const Profile = () => {
                   <Button variant="primary" className="mt-3" onClick={handleLogout} style ={{ backgroundColor: '#333399'}}>
                     Cerrar sesion
                   </Button>
+                  <BtnChecout />
                 </Card.Body>
             </Card>
 

@@ -9,6 +9,7 @@ import Login from "./components/Login.jsx"
 import Profile from "./components/Profile.jsx"
 import "bootswatch/dist/minty/bootstrap.min.css";
 import UserProvider from "./context/UserContext.jsx"
+import {PayPalScriptProvider} from '@paypal/react-paypal-js'
 
 const router = createBrowserRouter([
   {
@@ -17,9 +18,12 @@ const router = createBrowserRouter([
   },
   {
     path: '/Profile',
-    element: <UserProvider>
-                <Profile/>
-            </UserProvider>
+    element:
+    <UserProvider>
+      <PayPalScriptProvider>
+        <Profile />
+      </PayPalScriptProvider>
+    </UserProvider>
   },
 {
   path: '/Listado',
@@ -27,14 +31,23 @@ const router = createBrowserRouter([
 },
 {
   path: '/CrearCuenta',
-  element: <UserProvider><CrearCuenta /></UserProvider>
+  element:
+  <UserProvider>
+    <PayPalScriptProvider options={{"client-id": "AaGD_mJtE7EC8x8AKctXxKaG_rdsmrQuP0ENDnAnzko5F960p1YZvnZWdf84wDxAR21Om3KlQwqGjYNe",
+      components: "buttons",
+      currency: "USD"}}>
+      <CrearCuenta />
+    </PayPalScriptProvider>
+  </UserProvider>
 },
 {
   path: '/Login',
   element: 
-  <UserProvider>
-    <Login />
-  </UserProvider>
+   <UserProvider>
+       <PayPalScriptProvider>
+          <Login />
+       </PayPalScriptProvider>
+    </UserProvider>
 },
 {
   path: '/ProductDetail/:id',
