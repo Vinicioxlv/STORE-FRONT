@@ -51,8 +51,10 @@ const ProductDetail = () => {
               <Card.Text>
                 Precio: {product.price}
               </Card.Text>
-              <Button variant="primary" style ={{ backgroundColor: '#333399'}}>Registrate para comprar</Button>
-            </Card.Body>
+              <Link to ='/Login'>
+                <Button variant="primary" style ={{ backgroundColor: '#333399'}}>Comprar</Button>
+              </Link>
+             </Card.Body>
           </Card>
         </Col>
       </Row>

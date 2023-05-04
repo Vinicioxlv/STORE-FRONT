@@ -1,4 +1,4 @@
-import React, {  useContext } from 'react'
+import React, {  useState, useContext } from 'react'
 import axios from 'axios'
 import Navbar from "./Navbar.jsx"
 import { UserContext } from '../context/UserContext';
@@ -10,7 +10,8 @@ import logo2 from "../assets/logo2.png";
 const Login = () => {
   //const [ loginForm, setLoginForm] = useState({ email: "", password: "" })
 
-const { userData, setUserData } = useContext(UserContext);
+  const [loginUser, setLoginUser] = useState()
+  const { userData, saveUser } = useContext(UserContext)
 
   const url = 'https://store-backend-4.vercel.app/api/v1/auth/login'
   const url2 = 'https://store-backend-4.vercel.app/api/v1/users/me'
@@ -19,7 +20,7 @@ const { userData, setUserData } = useContext(UserContext);
   const handleSubmit = ()=>{
     console.log(userData)
 
-    axios.post( url, userData)
+    axios.post( url, loginUser)
     .then(res=>{
        console.log(res.data)
        return(
@@ -30,7 +31,7 @@ const { userData, setUserData } = useContext(UserContext);
                }
            }).then( response =>{
                console.log(response.data)
-               setUserData(response.data)
+               saveUser(response.data)
                navigation('/Profile')
            })
        )
@@ -39,11 +40,11 @@ const { userData, setUserData } = useContext(UserContext);
 
    const handleChange = (e) =>{
     const {name, value} = e.target
-    setUserData({
-     ...userData,
+    setLoginUser({
+     ...loginUser,
      [name]: value
     }) 
-    console.log(userData)
+    console.log(loginUser)
  }
 
   return (

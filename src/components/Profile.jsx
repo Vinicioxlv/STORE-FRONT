@@ -47,10 +47,10 @@ const Profile = () => {
                   {/* <Button variant="primary" className="mt-3">
                     Editar
                   </Button> */}
+                  <BtnChecout />
                   <Button variant="primary" className="mt-3" onClick={handleLogout} style ={{ backgroundColor: '#333399'}}>
                     Cerrar sesion
                   </Button>
-                  <BtnChecout />
                 </Card.Body>
             </Card>
 

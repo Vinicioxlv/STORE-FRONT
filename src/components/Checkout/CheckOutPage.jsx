@@ -6,7 +6,7 @@ const CheckOutPage = () => {
     <div>
       <BtnChecout 
       currency={currency}
-      showSpinner={false}/>
+      showSpinner={false} />
     </div>
   )
 }

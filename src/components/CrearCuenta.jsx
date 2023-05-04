@@ -6,11 +6,16 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import { useContext } from 'react'
-import { UserContext } from '../context/UserContext'
+
 
 const CrearCuenta = () => {
-  const {userData, setUserData } = useContext(UserContext)
+  const [userData, setUserData ] = useState({
+    name: '',
+    lastname: '',
+    username: '',
+    email: '',
+    password: ''
+  })
   
   const handleChange = (e) =>{
     const {name, value} = e.target
@@ -18,7 +23,7 @@ const CrearCuenta = () => {
       ...userData,
       [name]: value
     })
-    console.log(userData)
+    console.log(setUserData)
    }
 
   const handleSubmit = async (e) => {

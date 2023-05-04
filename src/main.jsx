@@ -18,12 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/Profile',
-    element:
-    <UserProvider>
-      <PayPalScriptProvider>
-        <Profile />
-      </PayPalScriptProvider>
-    </UserProvider>
+    element:<UserProvider><Profile /></UserProvider> 
   },
 {
   path: '/Listado',
@@ -31,23 +26,11 @@ const router = createBrowserRouter([
 },
 {
   path: '/CrearCuenta',
-  element:
-  <UserProvider>
-    <PayPalScriptProvider options={{"client-id": "AaGD_mJtE7EC8x8AKctXxKaG_rdsmrQuP0ENDnAnzko5F960p1YZvnZWdf84wDxAR21Om3KlQwqGjYNe",
-      components: "buttons",
-      currency: "USD"}}>
-      <CrearCuenta />
-    </PayPalScriptProvider>
-  </UserProvider>
+  element:<CrearCuenta />
 },
 {
   path: '/Login',
-  element: 
-   <UserProvider>
-       <PayPalScriptProvider>
-          <Login />
-       </PayPalScriptProvider>
-    </UserProvider>
+  element: <Login />
 },
 {
   path: '/ProductDetail/:id',
@@ -58,10 +41,15 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    
-      <RouterProvider router={router} />
-   
-  </React.StrictMode>
+<React.StrictMode>
+    <PayPalScriptProvider options={{
+      "client-id": "AcmX5AW4FYFEB_Xu6vdndfTKQsmpLLhPg9lH1XLPm0WMK4JmdKUC-cGcff6hBY3FlC5Bcr8nuUUmMmpP", components: "buttons",
+      currency: "USD"
+    }}>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </PayPalScriptProvider>
+  </React.StrictMode>,
 
 )
