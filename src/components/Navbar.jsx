@@ -11,9 +11,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
-import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Link } from "react-router-dom";
 
@@ -22,24 +22,25 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
  
   const menuOptions = [
-    {
-      text: "Home",
+    { 
+      
+      text:<Link to ='/'>Inicio</Link>,
       icon: <HomeIcon />,
     },
     {
-      text: "Sobre nosotros",
-      icon: <InfoIcon />,
+      text:<Link to ='/Profile'>Perfil</Link> ,
+      icon: <AccountCircleIcon  />,
     },
     {
-      text: "Testimonios",
+      text: <Link to ='/CrearCuenta'>Registrarse</Link>,
       icon: <CommentRoundedIcon />,
     },
     {
-      text: "Contacto",
-      icon: <PhoneRoundedIcon />,
+      text: <Link to ='/Login'>Iniciar sesión</Link>,
+      icon: <HowToRegIcon />,
     },
     {
-      text: "Reserva",
+      text: <Link to ='/Listado'>Tienda</Link> ,
       icon: <ShoppingCartRoundedIcon />,
     },
   ];
