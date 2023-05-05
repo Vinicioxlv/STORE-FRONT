@@ -5,7 +5,7 @@ import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom'
 import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
 import logo2 from "../assets/logo2.png";
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
   //const [ loginForm, setLoginForm] = useState({ email: "", password: "" })
@@ -54,8 +54,12 @@ const Login = () => {
       <Container>
         <Row className='justify-content-center mt-5'>
           <Col xs={12} sm={8} md={6} lg={4}>
-            <h1 className='text-center mb-3'>Login</h1>
-            <Form>
+            <h1 className='text-center mb-3'>Iniciar sesión</h1>
+            <p className='text-center mb-3'>¿Aún no tienes cuenta?</p>
+            <Link to='/CrearCuenta'>
+              <p className='text-center mb-3'>Regístrate</p>
+            </Link>
+          <Form>
               <Form.Group controlId='formBasicEmail'>
                 <Form.Label>Email</Form.Label>
                 <Form.Control

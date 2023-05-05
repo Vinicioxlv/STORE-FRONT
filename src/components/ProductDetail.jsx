@@ -1,18 +1,20 @@
 
 import "../App.css";
 import Navbar from "./Navbar.jsx"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext  } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Card, Button, Col, Container, Row } from 'react-bootstrap';
 import Footer from "./Footer";
 import productoBalanza from "../assets/productobalanza.png";
 import { Link } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
 
 
 const ProductDetail = () => {
   // Obtén el ID del producto de los parámetros de la URL
   const { id } = useParams();
+  const { userData } = useContext(UserContext)
 
   // Estado para almacenar los datos del producto
   const [product, setProduct] = useState({});
@@ -53,13 +55,15 @@ const ProductDetail = () => {
               </Card.Text>
               <Link to ='/Login'>
                 <Button variant="primary" style ={{ backgroundColor: '#333399'}}>Comprar</Button>
-              </Link>
-             </Card.Body>
+              </Link>            
+          
+            </Card.Body>
           </Card>
         </Col>
       </Row>
     </Container>
     <Footer />
+  
         </div>
   );
 };

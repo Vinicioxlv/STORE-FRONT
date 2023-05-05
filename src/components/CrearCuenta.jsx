@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom'
 
 
 const CrearCuenta = () => {
@@ -25,14 +25,15 @@ const CrearCuenta = () => {
     })
     console.log(setUserData)
    }
-
+  const navigation = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('https://store-backend-4.vercel.app/api/v1/register', userData);
       console.log(response.data); // Mostrar la respuesta de la API en la consola
       // Realizar acciones adicionales después de la solicitud exitosa, como redireccionar a otra página, mostrar un mensaje de éxito, etc.
-    } catch (error) {
+      navigation('/Login')
+      } catch (error) {
       console.error(error); // Mostrar cualquier error en la consola
       // Realizar acciones adicionales en caso de error, como mostrar un mensaje de error al usuario, etc.
     }
