@@ -7,8 +7,10 @@ import CrearCuenta from "./components/CrearCuenta.jsx"
 import ProductDetail from "./components/ProductDetail.jsx"
 import Login from "./components/Login.jsx"
 import Profile from "./components/Profile.jsx"
+import Checkout from './components/Checkout.jsx'
 import "bootswatch/dist/minty/bootstrap.min.css";
 import UserProvider from "./context/UserContext.jsx"
+import LoginProvider from "./context/LoginContext.jsx"
 import {PayPalScriptProvider} from '@paypal/react-paypal-js'
 
 const router = createBrowserRouter([
@@ -34,8 +36,22 @@ const router = createBrowserRouter([
 },
 {
   path: '/ProductDetail/:id',
-  element:<UserProvider><ProductDetail/></UserProvider>
-}
+  element:
+          <UserProvider>
+          <LoginProvider>
+            <ProductDetail />
+          </LoginProvider>
+        </UserProvider>
+},
+{
+  path: '/Checkout',
+  element:
+          <UserProvider>
+          <LoginProvider>
+            <Checkout />
+          </LoginProvider>
+        </UserProvider>
+},
 
 ])
 
@@ -46,9 +62,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       "client-id": "AcmX5AW4FYFEB_Xu6vdndfTKQsmpLLhPg9lH1XLPm0WMK4JmdKUC-cGcff6hBY3FlC5Bcr8nuUUmMmpP", components: "buttons",
       currency: "USD"
     }}>
-      <UserProvider>
-        <RouterProvider router={router} />
-      </UserProvider>
+      <LoginProvider>
+        <UserProvider>
+          <RouterProvider router={router} />
+        </UserProvider>
+      </LoginProvider>
+      
     </PayPalScriptProvider>
   </React.StrictMode>,
 

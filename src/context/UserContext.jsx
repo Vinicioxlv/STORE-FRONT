@@ -1,37 +1,29 @@
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState, useEffect } from 'react';
 
 export const UserContext = createContext({});
 
 const UserProvider = ({ children }) => {
-
-  const [userData, setUserData] = useState({})
-
-  const logout = () => {
-    setUserData({})
-    localStorage.setItem('user', '{}')
-  }
-
-  const getUserData = () => {
-    console.log(JSON.parse(localStorage.getItem('user')))
-    if (JSON.parse(localStorage.getItem('user'))) {
-      setUserData(JSON.parse(localStorage.getItem('user')))
-      console.log(userData)
-    }
-  }
+  const [userData, setUserData] = useState(() => {
+    // Obtiene los datos del usuario almacenados en localStorage al cargar el contexto
+    const storedUser = localStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
 
   const saveUser = (user) => {
-    if (localStorage.getItem('user')) {
-      setUserData(JSON.parse(localStorage.getItem('user')))
-    } else {
-      setUserData(user)
-      localStorage.setItem('user', JSON.stringify(user))
-    }
+    setUserData(user);
+    localStorage.setItem('user', JSON.stringify(user));
+  };
 
-
-  }
+  const logout = () => {
+    setUserData(null);
+    localStorage.removeItem('user');
+  };
 
   useEffect(() => {
-    getUserData()
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUserData(JSON.parse(storedUser));
+    }
   }, []);
 
   return (
@@ -40,8 +32,9 @@ const UserProvider = ({ children }) => {
         {children}
       </UserContext.Provider>
     </div>
-  )
-}
+  );
+};
 
-export default UserProvider
+export default UserProvider;
+
 
